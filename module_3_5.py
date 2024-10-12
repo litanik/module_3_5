@@ -1,9 +1,11 @@
 # 1. Создаем функцию get_multiplied_digits и параметр number в ней.
 def get_multiplied_digits(number):
-
     # 2. Создаем переменную str_number и записываем строковое
     # представление (str) числа number в нее.
     str_number = str(number)
+
+    # Удаляем ноль в значении (str) переменной str_number
+    str_number = str(str_number.replace('0', ''))
 
     # 3. Отделение первой цифры в числе: создаем переменную first и записываем
     # в нее первый символ из str_number в числовом представлении(int).
@@ -26,3 +28,9 @@ result1 = get_multiplied_digits(int('40203'))
 print(result1)
 result2 = get_multiplied_digits(int('00123'))
 print(result2)
+result3 = get_multiplied_digits(int('042'))
+print(result3)
+result4 = get_multiplied_digits(int('420'))
+print(result4)
+result5 = get_multiplied_digits(int('0420'))
+print(result5)
